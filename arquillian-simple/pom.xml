@@ -20,6 +20,8 @@
 	<properties>
 		<version.arquillian>1.1.8.Final</version.arquillian>
 		<version.wildfly>8.2.0.Final</version.wildfly>
+		<cassandra.version>3.3.0</cassandra.version>
+        <guava.version>23.0</guava.version>
 	</properties>
 
 	<dependencyManagement>
@@ -69,6 +71,26 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.9.1</version>
 		</dependency>
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-core</artifactId>
+            <version>${cassandra.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-extras</artifactId>
+            <version>${cassandra.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-mapping</artifactId>
+            <version>${cassandra.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
 	</dependencies>
 
 	<build>
